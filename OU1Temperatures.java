@@ -1,3 +1,9 @@
+/**
+* Finish the code to compute the least,
+* greatest and average temperatures,
+* of values stored in a two dimensional array
+*/
+
 import java.util.*; // Scanner , Locale
 
 class Temperatures {
@@ -33,6 +39,7 @@ class Temperatures {
             System.out.println();
         }
         System.out.println();
+        
     // the least , greatest and average temperature - weekly
         double[] minT = new double[nofWeeks + 1];
         double[] maxT = new double[nofWeeks + 1];
@@ -47,9 +54,7 @@ class Temperatures {
 
             for (int reading = 2; reading <= nofMeasurementsPerWeek; reading++) {
                 if (minT[week] > t[week][reading]) {
-
                     minT[week] = t[week][reading];
-
                 }
                 if (maxT[week] < t[week][reading]) {
 
@@ -61,11 +66,9 @@ class Temperatures {
         for (int week = 1; week <= nofWeeks; week++) {
 
             for (int reading = 1; reading <= nofMeasurementsPerWeek; reading++){
-
                 sumT[week] = sumT[week] + t[week][reading];
             }
             avgT[week] = sumT[week] / nofMeasurementsPerWeek;
-
         }
     // show the least , greatest and average temperature for
     // each week
@@ -80,6 +83,7 @@ class Temperatures {
 
             System.out.println();
         }
+
     // the least , greatest and average temperature - whole period
         double minTemp = minT[1];
         double maxTemp = maxT[1];
